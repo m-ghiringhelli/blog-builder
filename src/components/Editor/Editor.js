@@ -7,7 +7,8 @@ export default function Editor({
   setTitle,
   subtitle,
   setSubtitle,
-  setFont
+  setFont,
+  setAlign
 }) {
   return (
     <div className="editor">
@@ -34,7 +35,7 @@ export default function Editor({
         </select>
         <label>Font</label>
       </div>
-      <div className="form-control">
+      <div className="form-control" onChange={(e) => setAlign(e.target.value)}>
         <label>Alignment</label>
         <div className="radio-group">
           <label>
