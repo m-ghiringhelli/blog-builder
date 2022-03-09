@@ -6,7 +6,8 @@ export default function Editor({
   title, 
   setTitle,
   subtitle,
-  setSubtitle 
+  setSubtitle,
+  setFont
 }) {
   return (
     <div className="editor">
@@ -15,11 +16,13 @@ export default function Editor({
         <label htmlFor="title">Title</label>
       </div>
       <div className="form-control">
-        <input type="text" value={subtitle}/>
+        <input type="text" value={subtitle} onChange={(e) => setSubtitle(e.target.value)}/>
         <label>Subtitle</label>
       </div>
       <div className="form-control">
-        <select>
+        <select
+          onChange={(e) => setFont(e.target.value)}
+        >
           <option value="architect">{"Architect's Daughter"}</option>
           <option value="comforter">Comforter</option>
           <option value="fredoka">Fredoka</option>
